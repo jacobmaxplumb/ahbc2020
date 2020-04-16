@@ -1,0 +1,25 @@
+/* these are for table borders */
+
+body {
+    height: 200vh;
+}
+
+header {
+    background-color: blue;
+    width: 100%;
+    position: fixed;
+}
+
+div {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.name {
+    position: absolute;
+    left: 90%;
+    top: 90%;
+}
