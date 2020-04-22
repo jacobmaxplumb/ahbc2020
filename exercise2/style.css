@@ -1,0 +1,80 @@
+html,
+body {
+    font-family: 'Nanum Brush Script', cursive;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    height: 100%;
+}
+
+.first {
+    display: flex;
+    margin: 20px;
+}
+
+.first-flex {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+.second-flex {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 5px 5px #888888;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    transform: rotate(2deg)
+}
+
+.third-flex {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 5px 5px #888888;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    transform: rotate(-2deg)
+}
+
+.third-flex img {
+    margin-top: 10px;
+    width: 90%;
+    height: 90%;
+}
+
+.third-flex p {
+    margin: 5px;
+}
+
+.second-flex img {
+    margin-top: 10px;
+    width: 90%;
+    height: 90%;
+}
+
+.second-flex p {
+    margin: 5px;
+}
+
+.paragraph {
+    margin-bottom: 20px;
+}
+
+.header {
+    font-family: 'Seaweed Script', cursive;
+    margin-left: 20px;
+}
