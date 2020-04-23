@@ -1,0 +1,46 @@
+* {
+    border: 1px solid black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    background-color: #551A8B;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.title {
+    display: flex;
+}
+
+a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 480px) {
+    .navbar {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .links {
+        flex-direction: row;
+    }
+    .links a {
+        margin-left: 10px;
+    }
+    a {
+        margin-bottom: 0px;
+    }
+}
