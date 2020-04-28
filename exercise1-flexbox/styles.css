@@ -1,0 +1,21 @@
+:root {
+    --background-color: #EAF4F9;
+    --button-color: #3598DB;
+    --button-text: white;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: var(--button-color);
+    color: var(--button-text);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
