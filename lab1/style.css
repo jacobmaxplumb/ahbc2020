@@ -1,43 +1,76 @@
 body {
+    height: 100vh;
     background-color: #f9fafc;
     font-family: 'Open Sans', sans-serif;
-    margin: 20px;
 }
 
-header {
-    margin-bottom: 5px;
+.links {
+    display: flex;
+    flex-direction: column;
 }
 
-ul {
-    padding: 0px;
-    margin-top: 0px;
+.other-links {
+    display: flex;
+    flex-direction: column;
 }
 
-li {
-    list-style: none;
-    margin-bottom: 5px;
+h3 {
+    margin: 0;
 }
 
 a {
-    color: #69696a;
     text-decoration: none;
+    color: grey;
 }
 
 button {
     width: 100%;
-    color: white;
+    height: 40px;
+    border-radius: 20px;
     background-color: black;
-    height: 50px;
-    border-radius: 25px;
-    font-size: 120%;
-    margin-bottom: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
 }
 
-.vertical {
-    border-left: 3px solid #69696a;
+.circles {
+    display: none;
+}
+
+p {
+    border-left: 2px solid black;
     padding-left: 15px;
 }
 
-.margin-button {
-    margin-top: 30px;
+@media screen and (min-width: 768px) {
+    .links {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+    .title {
+        align-self: center;
+    }
+    .other-links {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .other-links a {
+        margin-right: 10px;
+    }
+    .other-links button {
+        width: 100px;
+    }
+    .paragraph {
+        display: flex;
+        justify-content: space-between;
+    }
+    .paragraph p {
+        width: 25%;
+    }
+    .paragraph .circles {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
