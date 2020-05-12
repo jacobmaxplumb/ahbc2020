@@ -1,13 +1,20 @@
+"use strict";
+
 // function to return random damage
 const randomDamage = () => {
     let result = Math.floor((Math.random() * 10) + 1);
     return result;
 }
 
+
 // this randomizes one to two options put in as arguments
 const chooseOption = (opt1, opt2) => {
     const randNum = Math.round(Math.random());
     return randNum === 0 ? opt1 : opt2;
+}
+
+{
+    let variable = 'something';
 }
 
 // its going to take in a health and its going to subtract that from
@@ -27,14 +34,14 @@ const logDeath = (winner, loser) => {
 }
 
 const isDead = (health) => {
-    if (health <= 0) {
-        return true;
+        if (health <= 0) {
+            return true;
+        }
+        return false;
     }
-    return false;
-}
-
-// this is going to be the function that runs the game
+    // this is going to be the function that runs the game
 function fight(player1, player2, player1Health, player2Health) {
+    const name = 'name';
     // need a loop that continuous until break is hit
     while (true) {
         // setting the attacker
@@ -64,5 +71,3 @@ function fight(player1, player2, player1Health, player2Health) {
         }
     }
 }
-
-fight('one', 'two', 100, 100);
