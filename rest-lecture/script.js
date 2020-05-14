@@ -36,3 +36,9 @@
 // console.log(names2);
 
 // function that takes in an infinate amount of numbers and it prints the number times 2;
+
+functionName(1, 2, 3, 5, 6, 7);
+// 2
+// 4 
+// 6
+// 10
