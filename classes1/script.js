@@ -53,7 +53,7 @@ class Rectangle {
         return this.width * this.length;
     }
     printArea() {
-        console.log(`the area is: ${this.returnArea}`);
+        console.log(`the area is: ${this.returnArea()}`);
     }
 }
 
