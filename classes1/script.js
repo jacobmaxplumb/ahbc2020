@@ -46,9 +46,8 @@
 
 class Rectangle {
     constructor(width, length) {
-        newRect.width = width;
-        newRect.length = length;
-        console.log(j.width);
+        this.width = width;
+        this.length = length;
     }
     returnArea() {
         return this.width * this.length;
