@@ -51,8 +51,7 @@ orderList.addOrder(order3);
 
 orderList.printOrders();
 
-setTimeout(() => {
-    orderList.deleteOrder(3);
-    orderList.updateOrder(new Order(2, 'orange', 2));
-    orderList.printOrders();
-}, 3000);
+
+orderList.deleteOrder(3);
+orderList.updateOrder(new Order(2, 'orange', 2));
+orderList.printOrders();
