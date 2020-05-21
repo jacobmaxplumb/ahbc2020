@@ -52,13 +52,17 @@ function filterPassing(array) {
     return newArray;
 }
 
+let myArray = [
+    { name: 'jane', score: 95, date: '2020-10-24', passed: true },
+    { name: 'jane', score: 95, date: '2020-10-24', passed: true },
+]
 
-let people = [
-    { name: 'jacob', age: 29, level: 100 },
-    { name: 'james', age: 29, level: 100 },
-    { name: 'jon', age: 30, level: 100 },
-    { name: 'marie', age: 26, level: 100 },
-    { name: 'michelle', age: 58, level: 100 },
-    { name: 'david', age: 60, level: 100 },
-    { name: 'alyssa', age: 29, level: 100 },
-];
+function filterPassing(array) {
+    let returnArray = array.filter(item => item.passing === true); // item.passing
+    return returnArray;
+}
+
+function filter90AndAbove(array) {
+    let returnArray = array.filter(item => item.score >= 90);
+    return returnArray;
+}
