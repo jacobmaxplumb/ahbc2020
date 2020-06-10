@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Address Book</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">My Address Book</h1>
+    </header>
+    <main>
+      <div class="form-container">
+        <form class="add-contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" />
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" />
+          <label for="relation">Relation</label>
+          <input type="text" id="relation" name="relation" />
+          <button>Submit</button>
+        </form>
+      </div>
+      <div class="cards-container"></div>
+    </main>
+    <footer>
+      <p class="contacts-count">Contacts: 0</p>
+      <button class="add-contact"><i class="fas fa-plus"></i></button>
+    </footer>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8e689803fb.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

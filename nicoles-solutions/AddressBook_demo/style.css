@@ -1,0 +1,62 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  height: 100vh;
+}
+header {
+  background-color: #cefa87;
+  padding: 20px;
+}
+main {
+  background-color: lightskyblue;
+  overflow: scroll;
+  flex: 1;
+}
+.form-container {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 4;
+}
+.add-contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: azure;
+  padding: 30px;
+  border-radius: 5px;
+}
+.cards-container {
+  display: flex;
+}
+.card {
+  background-color: white;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 10px 10px 8px #888;
+}
+.delete-contact {
+  position: absolute;
+  right: -10px;
+  bottom: -5px;
+  font-size: 16px;
+  color: red;
+  padding: 5px;
+  border-radius: 50%;
+}
+footer {
+  background-color: #cefa87;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
