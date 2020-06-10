@@ -1,0 +1,7 @@
+#circle {
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    position: absolute;
+    transition: 2s;
+}

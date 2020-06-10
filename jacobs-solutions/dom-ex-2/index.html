@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .title {
+            height: 50px;
+            background-color: grey;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        
+        .hide {
+            display: none;
+        }
+        
+        #menu {
+            position: absolute;
+            border: 1px solid black;
+            background-color: white;
+            top: 50px;
+            width: 50px;
+        }
+        
+        i {
+            padding-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <i id="menu-button" class="fas fa-bars"></i>
+        <div id="menu" class="hide">
+            <a href="https://google.com" id="letters" href="#">Letters</a>
+            <a id="numbers" href="#">Numbers</a>
+        </div>
+    </div>
+    <div class="body">
+        <div id="shownLetters" class="hide">alskdfjlkasjdflkjaslkdf</div>
+        <div id="shownNumbers" class="hide">1278468723648762374</div>
+    </div>
+
+    <h1 onclick="runFunction(event)">hello</h1>
+
+    <script src="https://kit.fontawesome.com/8e689803fb.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

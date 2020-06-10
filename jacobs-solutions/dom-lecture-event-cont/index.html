@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- this is where you want your event listener-->
+    <ul>
+        <li></li>
+        <!-- not here -->
+    </ul>
+
+
+    <div id="element1">
+        <p>hello</p>
+        <p>hi</p>
+        <p id="element2">something</p>
+        <p>something else</p>
+        <p>hello</p>
+
+        <p>something</p>
+    </div>
+
+    <!-- input stuff -->
+    <input type="text" id="name" />
+    <input type="checkbox" id="chkbox" />
+
+    <form id="customer-form">
+        <input type="text" name="firstName" />
+        <input type="text" name="lastName" />
+    </form>
+
+    <script>
+        // about event bubbling
+        document.getElementById('element1').addEventListener('click', (event) => {
+            console.log('event 1 clicked');
+        })
+        document.getElementById('element2').addEventListener('click', (event) => {
+            event.stopPropagation();
+            console.log('event 2 clicked');
+        })
+
+
+        // input stuff
+        let namee = document.getElementById('name');
+        let checkbox = document.getElementById('chkbox');
+        let customerForm = document.getElementById('customer-form');
+
+        const customerFormData = new FormData(customerForm);
+        console.log(customerFormData);
+
+        document.addEventListener('click', (event) => {
+            // not form
+            console.log(namee.value);
+            checkbox.checked = !checkbox.checked;
+
+            // form
+            console.log(customerFormData);
+        })
+    </script>
+</body>
+
+</html>
