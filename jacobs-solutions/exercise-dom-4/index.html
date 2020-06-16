@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coins</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <h2>Make Money</h2>
 
     <form id="money-form">
-        <p>
-            <label for="count">How Many?</label>
-            <input id="count" name="count" type="number" required min="1" step="1" />
-        </p>
-        <p>
-            <label for="coin">Which Coin</label>
-            <select id="coin" name="coin">
-                <option>Penny</option>
-                <option>Nickel</option>
-                <option>Dime</option>
-                <option>Quarter</option>
+      <p>
+        <label for="count">How Many?</label>
+        <input
+          id="count"
+          name="count"
+          type="number"
+          required
+          min="1"
+          step="1"
+        />
+      </p>
+      <p>
+        <label for="coin">Which Coin</label>
+        <select id="coin" name="coin">
+          <option>Penny</option>
+          <option>Nickel</option>
+          <option>Dime</option>
+          <option>Quarter</option>
         </select>
-        </p>
-        <button id="submit-button">Make Money!</button>
+      </p>
+      <button id="submit-button">Make Money!</button>
     </form>
     <div id="coins-area"></div>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
