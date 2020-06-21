@@ -1,0 +1,29 @@
+/* .blue {
+  background-color: blue;
+}
+.yellow {
+  background-color: yellow;
+} */
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+}
+.no-color {
+  color: white;
+}
+.shape-container {
+  display: flex;
+}

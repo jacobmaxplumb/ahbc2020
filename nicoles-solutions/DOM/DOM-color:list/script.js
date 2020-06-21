@@ -8,11 +8,11 @@ form.addEventListener("click", (e) => {
   //cant use a "submit" event listener because that targets the whole form and I wouldnt be able to target the buttons individually with the if statements
   e.preventDefault();
   let data = new FormData(form);
-  if (e.target.classList.contains("color-btn")) {
+  if ((e.target.className = "color-btn")) {
     title.style.color = data.get("color");
     console.log(e);
   }
-  if (e.target.classList.contains("list-btn")) {
+  if ((e.target.className = "list-btn")) {
     let item = document.createElement("li");
     item.innerText = data.get("list");
     list.append(item);
