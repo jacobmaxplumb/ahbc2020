@@ -15,7 +15,7 @@ function makeShape() {
     const shape = shapeInput.value;
 
     // make a shape element and set its background color and class
-    const shapeElement = document.createElement('div');
+    const shapeElement = document.createElement('div'); []
     shapeElement.style.backgroundColor = color;
     shapeElement.classList.add(shape);
 
