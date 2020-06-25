@@ -1,0 +1,14 @@
+.show-color {
+  background-color: lightcoral;
+}
+.boxes {
+  display: flex;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: lightskyblue;
+  border: 1px solid blue;
+  margin: 5px;
+  padding: 5px;
+}
