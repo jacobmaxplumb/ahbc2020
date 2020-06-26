@@ -1,0 +1,9 @@
+<h1>TODO List</h1>
+<p>A place to store your todos</p>
+<input placeholder="filter your todos" />
+<div *ngFor="let item of todoItems; let i = index">
+    {{i + 1}}. <span *ngIf="item.completed">complete</span> {{item.task}}
+</div>
+
+<input placeholder="add your todo" />
+<button>Add</button>

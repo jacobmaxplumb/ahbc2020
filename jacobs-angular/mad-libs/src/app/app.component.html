@@ -1,0 +1,22 @@
+<input [(ngModel)]="noun" />
+<input [(ngModel)]="adverb" />
+
+<h1>Noun: {{noun}}, Adverb: {{adverb}}</h1>
+
+<p>Angular is {{adverb}} fun! It is built using the {{noun}} design pattern.</p>
+
+<h1 [ngClass]="specialClassList">Hello</h1>
+
+<button (click)="changeColors()">Change</button>
+
+<p [ngStyle]="specialStyleList">jasldkfj</p>
+
+<div *ngIf="showText">
+    <h1>Goodbye</h1>
+</div>
+
+<ul>
+    <li *ngFor="let num of numberList; let i = index">
+        {{i}}. {{num}}
+    </li>
+</ul>

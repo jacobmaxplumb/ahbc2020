@@ -26,6 +26,6 @@ var calcInventoryValue = function (iItems) {
     iItems.forEach(function (i) { return sum += i.product.price * i.quantity; });
     return sum;
 };
-var inventoryValue = calcInventoryValue(inventoryItems);
-console.log(inventoryValue);
+var inventoryValued = calcInventoryValue(inventoryItems);
+console.log(inventoryValued);
 //# sourceMappingURL=inventory.js.map

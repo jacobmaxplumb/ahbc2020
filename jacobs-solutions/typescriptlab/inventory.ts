@@ -5,8 +5,7 @@ interface InventoryItem {
 
 const inventoryItems: InventoryItem[] = [
     {
-        product: 
-        {
+        product: {
             price: 10.00,
             name: 'motor'
         },
@@ -36,7 +35,7 @@ const calcInventoryValue = (iItems: InventoryItem[]): number => {
     return sum;
 }
 
-const inventoryValue = calcInventoryValue(inventoryItems);
+const inventoryValued: number = calcInventoryValue(inventoryItems);
 
-console.log(inventoryValue);
+console.log(inventoryValued);
 
