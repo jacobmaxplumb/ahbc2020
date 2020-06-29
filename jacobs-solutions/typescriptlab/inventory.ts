@@ -3,6 +3,14 @@ interface InventoryItem {
     quantity: number;
 }
 
+const inventoryItem: InventoryItem = {
+    product: {
+        name: 'string',
+        price: 2
+    },
+    quantity: 4,
+}
+
 const inventoryItems: InventoryItem[] = [
     {
         product: {

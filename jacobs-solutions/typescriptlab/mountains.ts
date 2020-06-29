@@ -5,9 +5,12 @@ interface Mountain {
 }
 
 // 2
-let mountains: Mountain[];
+let mountains: Mountain[] = [];
 
-// 3
+// 3a
+// mountains.push({name: 'Kilimanjaro', height: 19341});
+
+// 3b
 mountains = [
     {name: 'Kilimanjaro', height: 19341},
     {name: 'Everest', height: 29029},

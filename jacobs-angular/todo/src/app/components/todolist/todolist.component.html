@@ -1,0 +1,9 @@
+<div *ngFor="let item of todoItems" [ngStyle]="{'text-decoration': item.completed ? 'line-through' : 'none'}">
+    <!-- <button *ngIf="!item.completed" (click)="itemClicked(item)">completed</button>{{item.task}} -->
+    <app-info [todoItem]="item"></app-info>
+</div>
+
+<button (click)="addItem()">add</button>
+
+<app-info></app-info>
+<app-info></app-info>
