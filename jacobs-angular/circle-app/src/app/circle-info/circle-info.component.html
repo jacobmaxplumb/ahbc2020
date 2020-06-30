@@ -1,0 +1,5 @@
+<input type="number" [(ngModel)]="diameter" />
+<br>
+<div class="circle" [ngStyle]="{'height': diameter+'px', 'width': diameter+'px'}"></div>
+
+<p [ngStyle]="{'text-decoration': 'line-through'}" [hidden]="isHidden"></p>
