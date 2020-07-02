@@ -1,0 +1,6 @@
+<div>
+    <input type="text" placeholder="filter people" [(ngModel)]="filterInput" (input)="myFunction()" />
+    <div *ngFor="let person of filteredPeople">
+        {{person.name}} - {{person.age}}
+    </div>
+</div>

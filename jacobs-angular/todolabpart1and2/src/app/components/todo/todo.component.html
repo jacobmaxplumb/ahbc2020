@@ -1,0 +1,12 @@
+<div class="todo-list">
+    <h1>TODO List</h1>
+    <h4>A Place To Store Your Todos</h4>
+    <input type="text" class="todo-filter" placeholder="Filter Your Todos">
+    <div class="todo-list">
+        <div class="todo-item" *ngFor="let item of todos">
+            <button *ngIf="!item.completed" (click)="item.completed = true">Complete</button>
+            <div [ngStyle]="{'text-decoration' : item.completed ? 'line-through' : 'none'}">{{item.task}}</div>
+            <div>X</div>
+        </div>
+    </div>
+</div>
