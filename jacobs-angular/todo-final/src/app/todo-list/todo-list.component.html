@@ -1,0 +1,10 @@
+<div>
+    <input placeholder="filter todo items" [(ngModel)]="filterInput" />
+    <div class="inline" *ngFor="let item of filter(); let i = index">
+        <button *ngIf="!item.completed" (click)="item.completed = true">Complete</button>
+        <div [ngStyle]="{'text-decoration': item.completed ? 'line-through' : 'none'}">{{ item.task }}</div>
+        <div (click)="removeItem(i)">X</div>
+    </div>
+    <input placeholder="add" [(ngModel)]="addItemInput" />
+    <button (click)="addItem()">Add</button> {{ sayHello() }}
+</div>
