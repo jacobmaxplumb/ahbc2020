@@ -1,0 +1,3 @@
+<app-shopping-item (outputItem)="changeShoppingItem($event)" *ngFor="let item of shoppingItems" [shoppingItem]="item"></app-shopping-item>
+<div>---------------------------</div>
+{{ currentItem?.name }}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoItem } from '../todo-item';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-todo-list',
@@ -22,8 +23,9 @@ export class TodoListComponent implements OnInit {
     ];
   }
 
-  removeItem(i: number): void {
-    this.todoList.splice(i, 1);
+  removeItem(item: TodoItem): void {
+    const itemIndex = this.todoList.indexOf(item);
+    this.todoList.splice(itemIndex, 1);
   }
 
   addItem() {
