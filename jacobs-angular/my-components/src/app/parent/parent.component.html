@@ -1,0 +1,5 @@
+<div class="parent-container">
+    <app-child *ngFor="let item of objects" [obj]="item" (setObj)="updateCurrentObject($event)"></app-child>
+    <div>-----------------------------</div>
+    <div>{{currentObj?.prop2}}</div>
+</div>
