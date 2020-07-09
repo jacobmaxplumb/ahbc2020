@@ -1,0 +1,13 @@
+<div class="todo-container">
+  <h1>TODO List</h1>
+  <p>A place to store your todos</p>
+  <form>
+    <input type="text" placeholder="Filter your todos" />
+  </form>
+  <ol>
+    <li *ngFor="let item of todoList">
+      <button>Complete</button>{{ item.task }}
+      <button><i class="fas fa-times"></i></button>
+    </li>
+  </ol>
+</div>
