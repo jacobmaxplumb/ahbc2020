@@ -1,0 +1,5 @@
+<div class="social-post-container">
+    <button (click)="showForm = true">New Thoughts</button>
+    <app-post *ngFor="let item of posts" [post]="item" (delete)="onDelete($event)"></app-post>
+    <app-post-form (submit)="onSubmit($event)" *ngIf="showForm"></app-post-form>
+</div>

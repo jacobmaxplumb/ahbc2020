@@ -1,0 +1,5 @@
+<div>
+    <button (click)="postNew = !postNew">Add Thought</button>
+    <app-post *ngFor="let post of posts" [post]="post" (delete)="removePost($event)"></app-post>
+    <app-post-form (closeForm)="submitModalInfo($event)" *ngIf="postNew"></app-post-form>
+</div>
