@@ -1,0 +1,5 @@
+<div>
+  <input type="text" [(ngModel)]="inputValue">
+  <button (click)="getRedditList()">Submit</button>
+  <app-single-result *ngFor="let post of posts" [post]="post.data"></app-single-result>
+</div>

@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.redditSerive.getRedditPosts().subscribe(data => {
-      console.log(data);
+      console.log(data.data);
     })
     this.blogService.getBlogPosts().subscribe((data: Blog) => {
       console.log(data.title);
