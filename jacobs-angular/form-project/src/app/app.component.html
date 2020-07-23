@@ -1,0 +1,9 @@
+<form #personForm="ngForm" (submit)="personFormSubmitted(personForm)">
+    <input name="name" type="text" ngModel>
+    <input name="age" type="text" ngModel>
+    <button type="submit">submit</button>
+</form>
+
+<form #searchForm="ngForm" (submit)="searchFormSubmitted(searchForm)">
+    <input name="searchTerm" ngModel>
+</form>
