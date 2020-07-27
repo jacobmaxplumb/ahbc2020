@@ -1,0 +1,5 @@
+<app-event-search-form></app-event-search-form>
+<div *ngFor="let event of getEvents()">
+  <div>{{event.name}}</div>
+  <img [src]="event.images[0].url" alt="">
+</div>

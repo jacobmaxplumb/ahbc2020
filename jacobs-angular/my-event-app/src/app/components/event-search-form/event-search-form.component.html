@@ -1,0 +1,6 @@
+<form #eventForm="ngForm" (submit)="eventFormSubmitted(eventForm.value)">
+  <input name="keyword" type="text" placeholder="keyword" ngModel/>
+  <input name="city" type="text" placeholder="city" ngModel />
+  <input name="postalcode" type="text" placeholder="postal code" ngModel />
+  <button type="submit">Submit</button>
+</form>
