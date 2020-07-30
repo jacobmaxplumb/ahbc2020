@@ -1,0 +1,6 @@
+<div style="border: 1px solid black; margin: 10px" *ngFor="let car of cars">
+  <p>{{car.make}}</p>
+  <p>{{car.model}}</p>
+  <p [ngClass]="car.year >= 2000 ? 'green' : 'red'">{{car.year}}</p>
+  <button (click)="deleteCar(car)">x</button>
+</div>
