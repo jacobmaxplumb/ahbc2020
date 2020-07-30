@@ -1,6 +1,27 @@
-<form #eventForm="ngForm" (submit)="eventFormSubmitted(eventForm.value)">
-  <input name="keyword" type="text" placeholder="keyword" ngModel/>
-  <input name="city" type="text" placeholder="city" ngModel />
-  <input name="postalcode" type="text" placeholder="postal code" ngModel />
-  <button type="submit">Submit</button>
+<form class="search-form" #eventForm="ngForm" (submit)="eventFormSubmitted(eventForm.value)">
+    <mat-form-field class="example-full-width">
+        <mat-label>Keyword</mat-label>
+        <input name="keyword" matInput placeholder="Keyword" ngModel>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>City</mat-label>
+        <input name="city" matInput placeholder="City" ngModel>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Postal Code</mat-label>
+        <input name="postalcode" matInput placeholder="Postal Code" ngModel>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Choose a date</mat-label>
+        <input name="startDateTime" matInput ngModel [matDatepicker]="picker1">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Choose a date</mat-label>
+        <input name="endDateTime" matInput ngModel [matDatepicker]="picker2">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
 </form>

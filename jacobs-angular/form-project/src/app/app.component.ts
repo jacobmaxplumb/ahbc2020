@@ -8,17 +8,10 @@ import { ApiService } from './api.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  returnObject: any;
 
-  constructor(private apiService: ApiService) {}
-
-  personFormSubmitted(formData: NgForm) {
-    console.log(formData);
-  }
-
-  searchFormSubmitted(data: NgForm) {
-    const s = data.value.searchTerm;
-    this.apiService.getList(s).subscribe((data) => { this.returnObject = data }, (error) => { console.log(`error was hit ${error}`) })
+  personFormSubmitted(data: NgForm) {
+    console.log(data);
   }
 }

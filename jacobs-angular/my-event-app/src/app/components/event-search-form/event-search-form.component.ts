@@ -21,21 +21,18 @@ export class EventSearchFormComponent implements OnInit {
       keyword: data.keyword,
       city: data.city,
       postalcode: data.postalcode,
-      startDate: '',
-      endDate: '',
+      startDate: data.startDateTime ? data.startDateTime.toISOString() : '',
+      endDate: data.endDateTime ? data.endDateTime.toISOString() : '',
     };
-    this.eventService.getEvents(parameters).subscribe((data: any) => {
-      this.eventService.events = data._embedded.events;
-    });
-    // this.eventService.getEvents(parameters).subscribe(this.onSuccess.bind(this), this.onError.bind(this));
+    this.eventService.getEvents(parameters).subscribe(this.onSuccess.bind(this), this.onError.bind(this));
   }
 
-  // onSuccess(data) {
-  //   this.eventService.events = data._embedded.events ? data._embedded.events : [];
-  // }
+  onSuccess(data) {
+    this.eventService.events = data._embedded.events ? data._embedded.events : [];
+  }
 
-  // onError(error: Error) {
-  //   console.log(error.message);
-  // }
+  onError(error: Error) {
+    console.log(error.message);
+  }
 
 }
