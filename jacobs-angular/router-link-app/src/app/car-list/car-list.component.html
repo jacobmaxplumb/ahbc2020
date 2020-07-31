@@ -1,0 +1,6 @@
+<div *ngFor="let car of getCars()" style="border: 1px solid black">
+  <div>{{car.make}}</div>
+  <div>{{car.model}}</div>
+  <div>{{car.year}}</div>
+  <button [routerLink]="['/detail']" [queryParams]="{make: car.make, model: car.model, year: car.year}">Detail</button>
+</div>
