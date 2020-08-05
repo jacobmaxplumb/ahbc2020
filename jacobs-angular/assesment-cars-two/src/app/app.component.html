@@ -1,1 +1,2 @@
-<app-car-list></app-car-list>
+<app-car-list *ngIf="showList"></app-car-list>
+<button (click)="showList = !showList">Click me</button>
