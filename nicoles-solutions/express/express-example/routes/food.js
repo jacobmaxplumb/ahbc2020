@@ -5,23 +5,23 @@ const food = [
   {
     id: 0,
     name: "spinach",
-    type: "vegetable"
+    type: "vegetable",
   },
   {
     id: 1,
     name: "pickle",
-    type: "vegetable"
+    type: "vegetable",
   },
   {
     id: 2,
     name: "tomato",
-    type: "fruit"
+    type: "fruit",
   },
   {
     id: 3,
     name: "coconut",
-    type: "nut"
-  }
+    type: "nut",
+  },
 ];
 
 foodRoutes.get("/food", (request, response) => {
@@ -30,7 +30,7 @@ foodRoutes.get("/food", (request, response) => {
 
 foodRoutes.get("/food/:id", (request, response) => {
   let id = parseInt(request.params.id);
-  let foundFood = food.find(item => id === item.id);
+  let foundFood = food.find((item) => id === item.id);
   if (foundFood) {
     response.json(foundFood);
   } else {
@@ -55,7 +55,7 @@ foodRoutes.put("/food/:id", (request, response) => {
   let id = parseInt(request.params.id);
   let updatedFood = request.body;
   updatedFood.id = nextId;
-  let index = food.findIndex(item => id === item.id);
+  let index = food.findIndex((item) => id === item.id);
   if (index > -1) {
     food.splice(index, 1, updatedFood);
     nextId++;
@@ -69,7 +69,7 @@ foodRoutes.put("/food/:id", (request, response) => {
 //create endpoint for DELETE of foods
 foodRoutes.delete("/food/:id", (request, response) => {
   let id = parseInt(request.params.id);
-  let index = food.findIndex(item => id === item.id);
+  let index = food.findIndex((item) => id === item.id);
   if (index > -1) {
     food.splice(index, 1);
     response.sendStatus(204);
