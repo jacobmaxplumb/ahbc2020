@@ -2,11 +2,21 @@ const express = require('express');
 const cars = express.Router();
 
 let myCars = [
-    { id: 1, make: 'Ford', model: 'Fusion' }
+    { id: 1, make: 'Ford', model: 'Fusion', price: 2000 }
 ];
 
 cars.get('/', (req, res) => {
-    res.send(myCars);
+    let cars = myCars;
+    if (req.query.make) {
+        cars = cars.filter(c => c.make == req.query.make);
+    }
+    if (req.query.model) {
+        cars = cars.filter(c => c.model == req.query.model);
+    }
+    if (req.query.maxPrice) {
+        cars = cars.filter(c => c.price <= req.query.maxPrice);
+    }
+    res.send(cars);
 })
 
 cars.get('/:id', (req, res) => {
@@ -19,7 +29,7 @@ cars.post('/', (req, res) => {
     const newId = myCars[lastElementIndex].id + 1;
     const newCar = { id: newId, make: req.body.make, model: req.body.model }
     myCars.push(newCar);
-    res.send('add a car successful')
+    res.send(myCars)
 })
 
 cars.put('/:id', (req, res) => {
@@ -34,7 +44,7 @@ cars.delete('/:id', (req, res) => {
     const carIndex = myCars.indexOf(car);
     console.log(carIndex);
     myCars.splice(carIndex, 1);
-    res.send('you deleted a car')
+    res.send(myCars)
 })
 
 module.exports = cars;
