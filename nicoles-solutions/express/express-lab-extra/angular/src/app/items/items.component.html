@@ -1,0 +1,30 @@
+<button (click)="togglePopup()">Add Item</button>
+<div class="pop-up" *ngIf="showPopup">
+  <form #addForm="ngForm" (ngSubmit)="addItem(addForm.value)">
+    <label for="product">Product</label>
+    <input type="text" name="product" id="product" ngModel />
+    <label for="price">Price</label>
+    <input type="text" name="price" id="price" ngModel />
+    <label for="quantity">Quantity</label>
+    <input type="text" name="quantity" id="quantity" ngModel />
+    <button>Add Item</button>
+  </form>
+</div>
+<div *ngFor="let item of cartItems; index as i">
+  <p>{{ item.product }}</p>
+  <p [ngClass]="{ red: item.price < 1, blue: item.price > 1 }">
+    {{ item.price | currency }}
+  </p>
+  <p>{{ item.quantity }}</p>
+  <button (click)="deleteItem(item.id)">Delete</button>
+  <button (click)="setIndex(i)">Show Form</button>
+  <form
+    #updateForm="ngForm"
+    (ngSubmit)="updateItem(item.id, item, updateForm)"
+    *ngIf="showIndex === i"
+  >
+    <label for="quantity">Update Quantity</label>
+    <input type="number" id="quantity" name="quantity" ngModel />
+    <button>Update</button>
+  </form>
+</div>
