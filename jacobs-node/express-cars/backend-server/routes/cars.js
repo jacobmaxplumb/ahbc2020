@@ -21,6 +21,9 @@ cars.get('/', (req, res) => {
 
 cars.get('/:id', (req, res) => {
     const car = myCars.find(c => c.id == req.params.id);
+    if (!car) {
+        res.sendStatus(404);
+    }
     res.send(car);
 })
 
@@ -35,7 +38,7 @@ cars.post('/', (req, res) => {
 cars.put('/:id', (req, res) => {
     const car = myCars.find(car => car.id == req.params.id);
     const carIndex = myCars.indexOf(car);
-    myCars[carIndex] = {id: car.id, make: req.body.make, model: req.body.model}
+    myCars[carIndex] = { id: car.id, make: req.body.make, model: req.body.model }
     res.send(`successfully updated car with id ${req.params.id}`)
 })
 
