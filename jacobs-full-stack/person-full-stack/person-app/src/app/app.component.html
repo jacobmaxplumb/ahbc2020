@@ -1,0 +1,12 @@
+<div class="app-container">
+  <form #personForm="ngForm" (submit)="personFormSubmitted(personForm.value)">
+    <input type="text" placeholder="first name" name="firstName" ngModel />
+    <input type="text" placeholder="last name" name="lastName" ngModel />
+    <input type="number" placeholder="age" name="age" ngModel />
+    <button type="submit">Submit</button>
+  </form>
+  <div *ngFor="let person of people">
+    <span>{{person.firstName}} - {{person.lastName}} - {{person.age}} </span>
+    <span (click)="deletePerson(person.id)">x</span>
+  </div>
+</div>
