@@ -1,0 +1,32 @@
+<div *ngIf="!editItem">
+    <form #productForm="ngForm" (submit)="productFormSubmitted(productForm.value)">
+        <input type="text" name="product" placeholder="product" ngModel/>
+        <input type="number" name="price" ngModel placeholder="price" />
+        <input type="number" name="quantity" ngModel placeholder="quantity" />
+        <button type="submit">Submit</button>
+    </form>
+
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Delete</th>
+        </tr>
+        <tr *ngFor="let product of products">
+            <td (click)="itemClicked(product)">{{product.product}}</td>
+            <td (click)="itemClicked(product)">{{product.price}}</td>
+            <td (click)="itemClicked(product)">{{product.quantity}}</td>
+            <td (click)="deleteItem(product.id)">x</td>
+        </tr>
+    </table>
+</div>
+
+
+<form *ngIf="editItem" (submit)="updateFormSubmitted($event)">
+    <input type="text" [(ngModel)]="selectedProduct.product" [ngModelOptions]="{standalone: true}" />
+    <input type="number" [(ngModel)]="selectedProduct.price" [ngModelOptions]="{standalone: true}" />
+    <input type="number" [(ngModel)]="selectedProduct.quantity" [ngModelOptions]="{standalone: true}" />
+    <button type="submit">Submit</button>
+    <button (click)="editItem = false">x</button>
+</form>
